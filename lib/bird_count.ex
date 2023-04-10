@@ -11,9 +11,9 @@ defmodule BirdCount do
   def has_day_without_birds?([h | t]), do: has_day_without_birds?(t)
 
 
-  def total(list) do
-    # Please implement the total/1 function
-  end
+  def total([]), do: 0
+  def total([h | t]), do: h + total(t)
+
 
   def busy_days(list) do
     # Please implement the busy_days/1 function
