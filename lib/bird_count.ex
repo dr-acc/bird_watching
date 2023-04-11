@@ -15,7 +15,7 @@ defmodule BirdCount do
   def total([h | t]), do: h + total(t)
 
 
-  def busy_days(list) do
-    # Please implement the busy_days/1 function
-  end
+  def busy_days([]), do: 0
+  def busy_days([h | t]) when h >= 5, do: 1 + busy_days(t)
+  def busy_days([h | t]), do: busy_days(t)
 end
